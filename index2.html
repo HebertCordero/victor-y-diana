@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor y Diana</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <nav id="top-nav" class="hidden">
+        <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#schedule">Itinerario</a></li>
+            <li><a href="#rsvp">Asistencia</a></li>
+            <li><a href="#info">Información</a></li>
+            <li><a href="#dressCode">Dresscode</a></li>
+            <li><a href="#gifts">Regalos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Add a top nav that is not present at the start but slides in elegantly when the user scrolls down a bit with quick nav options to sections, feel free to suggest -->
+        <section class="hero">
+            <!-- This one has a vertical image behind content, and content is placed absolutely top-centered with a top spacing image is 844px h -->
+            <h1 class="title">
+                <span class="title">Victor</span> 
+                <span class="title small">&amp;</span> 
+                <span class="title">Diana</span>
+            </h1>
+            <p>14.03.2026</p>
+            <div class="countdown-container">
+                <div class="countdown-el days-c">
+                    <p class="big-text" id="days">0</p>
+                    <span>Días</span>
+                </div>
+                <div class="countdown-el hours-c">
+                    <p class="big-text" id="hours">0</p>
+                    <span>Horas</span>
+                </div>
+                <div class="countdown-el mins-c">
+                    <p class="big-text" id="mins">0</p>
+                    <span>Min</span>
+                </div>
+            </div>
+        </section>
+        <section class="schedule">
+            <!-- This one has a vertical image behind content, and content is placed absolutely centered-centered image is 700px h-->
+            <div class="floating-box">
+                <h2>ITINERARIO</h2>
+                <!-- Vertical line down -->
+                <div>
+                    <h3>16:00 - MISA</h3>
+                    <p>desc loc1</p>
+                    <!-- should i use anchor? as this redirects to GoogleMaps -->
+                    <button>Direccion <!--icon i-chevron_right--white.svg--></button>
+                </div>
+                <!-- Vertical line down -->
+                <div>
+                    <h3>18:00 - COCTEL</h3>
+                    <p>desc loc2</p>
+                    <!-- should i use anchor? as this redirects to GoogleMaps -->
+                    <button>Direccion <!--icon i-chevron_right--white.svg--></button>
+                </div>
+                <!-- Vertical line down -->
+                <div>
+                    <h3>18:30 - COCTEL</h3>
+                    <p>desc loc2</p>
+                    <!-- should i use anchor? as this redirects to GoogleMaps -->
+                    <button>Direccion <!--icon i-chevron_right--white.svg--></button>
+                </div>
+            </div>
+        </section>
+        <section class="rsvp">
+            <!-- This one has a vertical floating to the right side not using full width, and content is placed absolutely left-centered on a text box-->
+            <div class="floating-box">
+                <!-- Max width of this floating box is of 200px on top of image that is behind and charged to the right-->
+                <h2>ASISTENCIA:</h2>
+                <p>Ayúdanos a que todo sea perfecto confirmando lo antes posible</p>
+                <ol>
+                    <li>
+                        <h3>1- NO NIÑOS</h3>
+                        <p>Para priorizar su seguridad, la celebracion será solo para adultos.</p>
+                    </li>
+                    <li>
+                        <h3>2- UN FAVOR DE CORAZÓN</h3>
+                        <p>Deseamos que la ceremonia sea un momento intimo, por eso pedimos que sea libre de celulares y cámaras. Queremos ver sus sonrisas, no pantallas. </p>
+                    </li>
+                </ol>
+                <!-- should i use anchor? as this redirects to the wedding planers whats app on click with a preloaded chat-->
+                <button>CONFIRMAR <!--icon i-chevron_right--white.svg--></button>   
+            </div>
+        </section>
+        <section class="info">
+            <!-- This one has a vertical image behind content, and content is placed absolutely centered-centered. image is 500px h -->
+            <div class="floating-box">
+                <!-- Max width of this floating box is of 350px on top of image and position bottom with some space below-->
+                <div class="floating-box">
+                <!-- Max width of this floating box is of 200px on top of image that is behind and charged to the right-->
+                <h2>MÁS INFORMACIÓN</h2>
+                <p>Sigue la cuenta de los novios para conocer las últimas actualizaciónes </p>
+                <!-- should i use anchor? as this redirects to the bride's instagram account with tips and tricks for the wedding -->
+                <button>@IG AccountHere <!--icon i-chevron_right--white.svg--></button>   
+            </div>
+        </section>
+        <section class="dressCode">
+            <!-- Just as RSVP but to the image is on the left this time and flaoting box on the right  -->
+            <div class="floating-box">
+                <!-- Max width of this floating box is of 200px on top of image that is behind and charged to the right-->
+                <h2>DRESSCODE:</h2>
+                <p>Formal Jardín</p>
+                <p>Queremos que te sientas espectacular, pero sobre todo cómodo/a — que tu vestimenta no te impida bailar, reír y disfrutar de principio a fin. La paleta de colores es libre y nos encantaría verte usar tus colores favoritos, solo te pedimos evitar los tonos muy claros (ya sabes, ¡la de blanco es la novia!).</p>
+                <!-- should i use anchor? as this redirects to the bride's instagram account with tips and tricks for the wedding -->
+                <button>INSPIRACION <!--icon i-chevron_right--white.svg--></button>   
+            </div>
+        </section>
+        <section class="gifts">
+            <!-- This one has a vertical image behind content, and content is placed absolutely centered-centered. image is 500px h -->
+            <div class="floating-box">
+                <h2>mesa de regalos</h2>
+                <p>
+                    Gracias a tu regalo, nuestra luna de miel será aún más especial, llena de momentos que recordemos por siempre.
+                    <br><br>
+                    Nos emociona que seas parte de esta nueva etapa y te agradecemos por acompañarnos con tanto cariño, nos vemos al atardecer!
+                </p>
+                <!-- no anchor here this one opens a modal with the couples bank info -->
+                <!-- trasferencia Modal: has the info, a button that says CERRAR and COPIAR CUENTA to easily get the info i know its intuitive to click outside to close but we are dealing with dub people -->
+                <button>TRANSFERENCIA <!--icon i-chevron_right--white.svg--></button>   
+                <!-- should i use anchor? as this redirects to the couples Amazon referal to buy them gifts -->
+                <button>AMAZON <!--icon i-chevron_right--white.svg--></button>   
+            </div>
+        </section>
+        <section class="faq">
+            <!-- Use detail and summary to make a toggable list and icon changes from + to -. also when opening a new faq the old one should close -->
+            <!-- This one has a vertical image behind content as big as needed as content may grow opening faqs, and content is placed absolutely centered-centered image is 770px h but feel free to do maigc? -->
+            <div class="floating-box">
+                <details>
+                    <summary>¿Cuándo es la boda? <!-- Icon + to show it can be opened --></summary>
+                    <p>ans of faq here...</p>
+                </details>
+                <details>
+                    <summary>¿Cuál es el código de vestimenta? <!-- Icon - to show it can be closed (its opened by default) --></summary>
+                    <p>El código de vestimenta es formal. Por ser boda en jardín, recomendamos usar telas frescas y calzado cómodo (puedes..........)</p>
+                </details>
+                <details>
+                    <summary>¿Hay opciones de hospedaje? <!-- Icon + to show it can be opened --></summary>
+                    <p>ans of faq here...</p>
+                </details>
+                <!-- and so on.. the bride added 14 faqs... -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>

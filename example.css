@@ -1,0 +1,277 @@
+/* Mobile-first wedding invite styles
+   - min-width: 700px -> small desktop
+   - min-width: 1280px -> large desktop
+*/
+
+:root{
+  /* Colors */
+  --c-cream: #F6F5F2;
+  --c-darkGreen: #2E4E36;
+  --c-olive: #5A684D;
+  --c-white: #ffffff;
+  --c-muted: #e9e9e9;
+
+  /* Spacing / layout */
+  --gutter: 16px;
+  --max-width: 1200px;
+
+  /* Type */
+  --font-heading: "Cinzel", serif;
+  --font-body: "Montserrat", sans-serif;
+
+  /* Sizes */
+  --h1: 36px;
+  --h2: 20px;
+  --p: 16px;
+}
+
+/* Reset + base */
+*,
+*::before,
+*::after { box-sizing: border-box; margin:0; padding:0; }
+html,body{ height:100%; }
+body{
+  font-family: var(--font-body);
+  background: var(--c-cream);
+  color: var(--c-darkGreen);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.35;
+}
+
+/* Top nav (initially hidden, displayed after scroll) */
+.top-nav{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+  top: 12px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 6px 10px;
+  z-index: 60;
+  transition: transform .35s cubic-bezier(.2,.9,.2,1), opacity .25s;
+  opacity: 0;
+  backdrop-filter: blur(6px);
+}
+.top-nav.show{
+  transform: translateX(-50%) translateY(0);
+  opacity:1;
+}
+.top-nav ul{ display:flex; gap:8px; list-style:none; align-items:center; }
+.top-nav a{
+  text-decoration:none; color:var(--c-darkGreen); font-weight:600; font-size:14px; padding:8px 10px; display:inline-block;
+}
+.top-nav a:focus{ outline:3px solid rgba(46,78,54,0.12); border-radius:6px; }
+
+/* Sections base */
+.section,
+.hero{
+  position: relative;
+  min-height: 60vh;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  padding: calc(var(--gutter)*2) var(--gutter);
+}
+
+/* Background picture wrapper */
+.bg-picture{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  display:block;
+  height:100%;
+  width:100%;
+}
+.bg-picture img.bg-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  -webkit-mask-image: none; /* set in specific rules */
+  mask-image: none;
+  filter: none;
+}
+
+/* Overlays "banish" (top/bottom gradient bands) */
+.overlay{
+  position:absolute;
+  left:0; right:0;
+  height:22%;
+  pointer-events:none;
+  z-index:2;
+}
+.overlay--top{
+  top:0;
+  background: linear-gradient(to bottom, var(--c-cream) 0%, rgba(246,245,242,0.6) 45%, transparent 100%);
+}
+.overlay--bottom{
+  bottom:0;
+  background: linear-gradient(to top, var(--c-cream) 0%, rgba(246,245,242,0.6) 45%, transparent 100%);
+}
+
+/* Some sections (hero) require only bottom overlay - done via adding only .overlay--bottom in HTML */
+
+/* Floating content boxes (on top of images) */
+.floating-box{
+  position: relative;
+  z-index: 3;
+  background: rgba(246, 245, 242, 0.4); /* mostly transparent; content stands out via text */
+  padding: 18px;
+  max-width: 95%;
+}
+
+/* variants */
+.floating-box--center{ margin: 0 auto; max-width: 360px; }
+.floating-box--center-bottom{ margin: 0 auto; max-width: 380px; align-self:end; padding-bottom:32px; }
+.floating-box--left{ max-width: 320px; align-self:center; }
+.floating-box--right{ max-width: 320px; align-self:center; margin-left:auto; }
+
+/* Titles */
+.title{
+  font-family: var(--font-heading);
+  font-size: var(--h1);
+  letter-spacing: 1px;
+  text-align:center;
+  color:var(--c-darkGreen);
+  z-index:5;
+}
+.title-name{ display:block; }
+.title-amp{ display:inline-block; font-size:28px; margin:6px 0; color:var(--c-olive); }
+
+/* Hero specifics */
+.hero{
+  padding-top: 36px;
+  padding-bottom: 60px;
+  min-height: auto;
+}
+.hero .hero-content{
+  position: relative;
+  z-index:4;
+  text-align:center;
+  margin-top: 6vh;
+}
+
+/* Countdown display */
+.countdown-container{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  margin-top:16px;
+}
+.countdown-el{ text-align:center; background: rgba(255,255,255,0.26); padding:6px 14px; border-radius:10px; min-width:70px; }
+.countdown-el .big-text{ font-size:22px; font-weight:700; color:var(--c-darkGreen); }
+
+/* Section headings */
+.section h2{
+  font-family: var(--font-heading);
+  font-size:20px;
+  margin-bottom:10px;
+  color:var(--c-darkGreen);
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  background: var(--c-darkGreen);
+  color: var(--c-cream);
+  padding:10px 14px;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  margin-top:12px;
+  border: none;
+  cursor: pointer;
+}
+.btn:focus{ outline:3px solid rgba(46,78,54,0.12); }
+.btn.btn-ghost{
+  background: transparent;
+  color: var(--c-darkGreen);
+  border: 1px solid rgba(46,78,54,0.12);
+}
+
+/* Timeline */
+.timeline{ display:flex; flex-direction:column; gap:12px; }
+.slot h3{ font-size:16px; margin-bottom:4px; }
+.slot p{ font-size:14px; color:rgba(46,78,54,0.85); }
+
+/* FAQ details */
+.faq details{ margin-bottom:10px; background: rgba(255,255,255,0.6); padding:10px; border-radius:8px; }
+.faq summary{
+  list-style:none;
+  cursor:pointer;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.faq summary::marker{ content:none; }
+
+/* Modal */
+.modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:120; }
+.modal.show{ display:flex; }
+.modal-backdrop{ position:absolute; inset:0; background: rgba(0,0,0,0.4); }
+.modal-panel{
+  position:relative;
+  width: min(92%, 560px);
+  background: var(--c-white);
+  padding:18px;
+  border-radius:12px;
+  z-index:121;
+  box-shadow:0 24px 64px rgba(0,0,0,0.12);
+}
+.modal-actions{ display:flex; gap:8px; justify-content:flex-end; margin-top:12px; }
+
+/* small-screen enhancements: fade bottom of mobile images into the cream background
+   We use mask-image so the image visually fades to the background color.
+*/
+.bg-picture img.bg-img{
+  /* by default (mobile) fade bottom */
+  -webkit-mask-image: linear-gradient( to bottom, black 60%, transparent 100% );
+  mask-image: linear-gradient( to bottom, black 60%, transparent 100% );
+  height: 844px;
+}
+
+/* Accessibility focus */
+:focus{ outline: none; }
+
+/* Larger screens: min-width 700px (small desktop) */
+@media (min-width:700px){
+  :root{ --h1: 56px; }
+
+  .section{ padding: 56px calc(var(--gutter)*2); min-height: 70vh; }
+
+  .floating-box{
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(4px);
+    border-radius:12px;
+    padding:24px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  /* On larger screens, images are horizontal and we remove bottom mask so image covers fully */
+  .bg-picture img.bg-img{
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  /* layout tweaks: place floating boxes differently for visual variety */
+  .schedule .floating-box{ max-width:480px; margin-left:6%; }
+  .rsvp .floating-box--left{ margin-left:6%; }
+  .dressCode .floating-box--right{ margin-right:6%; }
+  .gifts .floating-box--center{ margin: 0 auto; max-width:480px; }
+
+  .countdown-container{ gap:24px; }
+  .countdown-el .big-text{ font-size:28px; }
+}
+
+/* Large desktop */
+@media (min-width:1280px){
+  :root{ --gutter: 24px; --h1: 84px; }
+
+  body{ max-width:var(--max-width); margin:0 auto; }
+  .section{ padding: 80px 48px; }
+  .floating-box{ padding:28px; }
+  .title{ font-size:var(--h1); }
+}

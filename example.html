@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Víctor y Diana — 14.03.2026</title>
+
+  <!-- Fonts used (kept simple & performant) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Top nav: hidden at first; slides in on scroll with quick anchors to sections -->
+  <nav id="top-nav" class="top-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#schedule">Itinerario</a></li>
+      <li><a href="#rsvp">Asistencia</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#dressCode">Dresscode</a></li>
+      <li><a href="#gifts">Regalos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <picture class="bg-picture">
+        <!-- horizontal (desktop) -->
+        <source srcset="img/hero-horizontal.jpg" media="(min-width:700px)">
+        <!-- vertical (mobile) -->
+        <img src="assets/1_hero-m.webp" alt="Víctor y Diana sonriendo" class="bg-img">
+      </picture>
+
+      <!-- overlay only at bottom for hero -->
+      <div class="overlay overlay--bottom" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <h1 id="hero-title" class="title" aria-label="Victor y Diana">
+          <span class="title-name">Víctor</span>
+          <span class="title-amp" aria-hidden="true">&amp;</span>
+          <span class="title-name">Diana</span>
+        </h1>
+
+        <p class="date">14.03.2026</p>
+
+        <div class="countdown-container" role="timer" aria-atomic="true" aria-live="polite">
+          <div class="countdown-el" aria-hidden="false">
+            <p class="big-text" id="days">0</p>
+            <span>Días</span>
+          </div>
+          <div class="countdown-el">
+            <p class="big-text" id="hours">0</p>
+            <span>Horas</span>
+          </div>
+          <div class="countdown-el">
+            <p class="big-text" id="mins">0</p>
+            <span>Min</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SCHEDULE -->
+    <section id="schedule" class="section has-image" aria-labelledby="schedule-title">
+      <picture class="bg-picture">
+        <source srcset="img/schedule-horizontal.jpg" media="(min-width:700px)">
+        <img src="assets/2_horario-m.webp" alt="Itinerario del día" class="bg-img">
+      </picture>
+
+      <!-- top + bottom overlay (banish) -->
+      <div class="overlay overlay--top" aria-hidden="true"></div>
+      <div class="overlay overlay--bottom" aria-hidden="true"></div>
+
+      <div class="floating-box" role="group" aria-labelledby="schedule-title">
+        <h2 id="schedule-title">Itinerario</h2>
+
+        <!-- Vertical timeline style items -->
+        <div class="timeline">
+          <div class="slot">
+            <h3>16:00 — MISA</h3>
+            <p>Parroquia San Example — breve descripción del lugar</p>
+            <!-- should i use anchor? as this redirects to GoogleMaps -->
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Example" target="_blank" rel="noopener noreferrer">Dirección</a>
+          </div>
+
+          <div class="slot">
+            <h3>18:00 — COCTEL</h3>
+            <p>Jardines La Luz — recepción y cóctel</p>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Example2" target="_blank" rel="noopener noreferrer">Dirección</a>
+          </div>
+
+          <div class="slot">
+            <h3>19:30 — RECEPCIÓN</h3>
+            <p>Salón Vista — cena y baile</p>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/place/Example3" target="_blank" rel="noopener noreferrer">Dirección</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="section rsvp has-image" aria-labelledby="rsvp-title">
+      <!--
+        This one has a vertical floating to the right side not using full width, and content is placed absolutely left-centered on a text box
+        Max width of floating box is ~200px on mobile then grows; image charged to right.
+      -->
+      <picture class="bg-picture">
+        <source srcset="img/rsvp-horizontal.jpg" media="(min-width:700px)">
+        <img src="img/rsvp-vertical.jpg" alt="Confirmación de asistencia" class="bg-img">
+      </picture>
+
+      <!-- both top+bottom banish -->
+      <div class="overlay overlay--top" aria-hidden="true"></div>
+      <div class="overlay overlay--bottom" aria-hidden="true"></div>
+
+      <div class="floating-box floating-box--left" role="region" aria-labelledby="rsvp-title">
+        <h2 id="rsvp-title">Asistencia</h2>
+        <p>Ayúdanos a que todo sea perfecto confirmando lo antes posible.</p>
+
+        <ol class="rules">
+          <li>
+            <h3>1 — NO NIÑOS</h3>
+            <p>Para priorizar su seguridad, la celebración será solo para adultos.</p>
+          </li>
+          <li>
+            <h3>2 — UN FAVOR DE CORAZÓN</h3>
+            <p>Deseamos una ceremonia íntima, por eso pedimos que sea libre de celulares y cámaras.</p>
+          </li>
+        </ol>
+
+        <!-- should i use anchor? as this redirects to the wedding planner's WhatsApp on click with a preloaded chat -->
+        <a class="btn" href="https://wa.me/1234567890?text=Hola%20!%20Confirmo%20mi%20asistencia%20para%20la%20boda" target="_blank" rel="noopener noreferrer">
+          Confirmar
+        </a>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section id="info" class="section has-image" aria-labelledby="info-title">
+      <!--
+        This one has a vertical image behind content, and content is placed absolutely centered-centered. image is ~500px h
+        Max width of this floating box is ~350px and positioned bottom with some space below
+      -->
+      <picture class="bg-picture">
+        <source srcset="img/info-horizontal.jpg" media="(min-width:700px)">
+        <img src="img/info-vertical.jpg" alt="Más información" class="bg-img">
+      </picture>
+
+      <!-- top+bottom "banish" -->
+      <div class="overlay overlay--top" aria-hidden="true"></div>
+      <div class="overlay overlay--bottom" aria-hidden="true"></div>
+
+      <div class="floating-box floating-box--center-bottom" role="region" aria-labelledby="info-title">
+        <h2 id="info-title">Más información</h2>
+        <p>Sigue la cuenta de los novios para conocer las últimas actualizaciones.</p>
+        <!-- should i use anchor? as this redirects to the bride's instagram account -->
+        <a class="btn btn-ghost" href="https://instagram.com/example" target="_blank" rel="noopener noreferrer">@CuentaIG</a>
+      </div>
+    </section>
+
+    <!-- DRESSCODE -->
+    <section id="dressCode" class="section dressCode has-image" aria-labelledby="dress-title">
+      <!--
+        Just as RSVP but the image is on the left and floating box on the right
+      -->
+      <picture class="bg-picture">
+        <source srcset="img/dress-horizontal.jpg" media="(min-width:700px)">
+        <img src="img/dress-vertical.jpg" alt="Dresscode formal jardín" class="bg-img">
+      </picture>
+
+      <div class="overlay overlay--top" aria-hidden="true"></div>
+      <div class="overlay overlay--bottom" aria-hidden="true"></div>
+
+      <div class="floating-box floating-box--right" role="region" aria-labelledby="dress-title">
+        <h2 id="dress-title">Dresscode</h2>
+        <p><strong>Formal Jardín</strong></p>
+        <p>Queremos que te sientas espectacular y cómodo/a. Evita tonos muy claros (la novia usa blanco).</p>
+        <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Inspiración</a>
+      </div>
+    </section>
+
+    <!-- GIFTS -->
+    <section id="gifts" class="section has-image" aria-labelledby="gifts-title">
+      <!--
+        This one has a vertical image behind content, and content is placed absolutely centered-centered. image is ~500px h
+      -->
+      <picture class="bg-picture">
+        <source srcset="img/gifts-horizontal.jpg" media="(min-width:700px)">
+        <img src="img/gifts-vertical.jpg" alt="Mesa de regalos" class="bg-img">
+      </picture>
+
+      <div class="overlay overlay--top" aria-hidden="true"></div>
+      <div class="overlay overlay--bottom" aria-hidden="true"></div>
+
+      <div class="floating-box floating-box--center" role="region" aria-labelledby="gifts-title">
+        <h2 id="gifts-title">Mesa de regalos</h2>
+        <p>
+          Gracias a tu regalo, nuestra luna de miel será aún más especial. Nos emociona que seas parte de esta nueva etapa.
+        </p>
+
+        <!-- opens modal with transfer info -->
+        <button class="btn" data-open="transfer-modal">Transferencia</button>
+
+        <!-- anchor to Amazon referral or list -->
+        <a class="btn btn-ghost" href="#" target="_blank" rel="noopener noreferrer">Amazon</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq has-image" aria-labelledby="faq-title">
+      <!--
+        Use details and summary to make a toggable list and icon changes from + to -.
+        Also when opening a new faq the old one should close.
+        This one has a vertical image behind content as big as needed as content may grow opening faqs.
+      -->
+      <picture class="bg-picture">
+        <source srcset="img/faq-horizontal.jpg" media="(min-width:700px)">
+        <img src="img/faq-vertical.jpg" alt="Preguntas frecuentes" class="bg-img">
+      </picture>
+
+      <div class="overlay overlay--top" aria-hidden="true"></div>
+      <div class="overlay overlay--bottom" aria-hidden="true"></div>
+
+      <div class="floating-box floating-box--center" role="region" aria-labelledby="faq-title">
+        <h2 id="faq-title">Preguntas frecuentes</h2>
+
+        <div class="faqs" id="faqs">
+          <details>
+            <summary>¿Cuándo es la boda?</summary>
+            <p>14 de marzo de 2026. Ceremonia a las 16:00.</p>
+          </details>
+
+          <details>
+            <summary>¿Cuál es el código de vestimenta?</summary>
+            <p>Formal jardín. Evitemos blancos muy claritos para no coincidir con la novia.</p>
+          </details>
+
+          <details>
+            <summary>¿Hay opciones de hospedaje?</summary>
+            <p>Pronto publicaremos recomendaciones de hoteles cercanos en esta sección.</p>
+          </details>
+
+          <!-- Add as many as needed -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TRANSFER MODAL -->
+  <div id="transfer-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="transfer-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="document">
+      <h3 id="transfer-title">Transferencia Bancaria</h3>
+      <p id="bank-info">Nombre: Victor & Diana<br>Banco: Ejemplo<br>CLABE: <code id="clabe">123456789012345678</code></p>
+
+      <div class="modal-actions">
+        <button class="btn copy" data-copy="#clabe">Copiar cuenta</button>
+        <button class="btn close" data-close> cerrar </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js" defer></script>
+</body>
+</html>

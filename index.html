@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor & Diana – 14.03.2026</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav id="top-nav" class="hidden">
+        <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#schedule">Itinerario</a></li>
+            <li><a href="#rsvp">Asistencia</a></li>
+            <li><a href="#info">Información</a></li>
+            <li><a href="#dressCode">Dresscode</a></li>
+            <li><a href="#gifts">Regalos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="hero">
+            <picture>
+                <!-- Desktop -->
+                <source srcset="img/hero-horizontal.jpg" media="(min-width: 700px)">
+                <!-- Mobile -->
+                <img src="assets/1_hero-m.webp" alt="Victor y Diana" class="bg-img">
+            </picture>
+
+            <div class="floatingBox top">
+                <h1 class="title">
+                    <span>VICTOR</span>
+                    <span class="amp">&amp;</span>
+                    <span>DIANA</span>
+                </h1>
+                <p class="date">14.03.2026</p>
+
+                <div class="countdown-container">
+                    <div class="countdown-el">
+                        <p id="days" class="big-text">50</p>
+                        <span>Días</span>
+                    </div>
+                    <div class="countdown-el">
+                        <p id="hours" class="big-text">8</p>
+                        <span>Horas</span>
+                    </div>
+                    <div class="countdown-el">
+                        <p id="mins" class="big-text">50</p>
+                        <span>Min</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ITINERARIO -->
+        <section id="schedule" class="schedule">
+            <picture>
+                <source srcset="img/schedule-horizontal.jpg" media="(min-width: 700px)">
+                <img src="assets/2_horario-m.webp" alt="Itinerario" class="bg-img">
+            </picture>
+            <div class="floatingBox">
+                <h2>ITINERARIO</h2>
+                <div class="slot">
+                    <h3>16:00 – MISA</h3>
+                    <p>Parroquia El Señor de la Misericordia,<br>en Pueblo Serena</p>
+                    <a class="btn" href="#" target="_blank">DIRECCION</a>
+                </div>
+                <div class="slot">
+                    <h3>18:00 – COCTEL</h3>
+                    <p>La Herencia,<br>Quinta San Jorge, 67318 Santiago, NL</p>
+                    <a class="btn" href="#" target="_blank">DIRECCION</a>
+                </div>
+                <div class="slot">
+                    <h3>18:30 – RECEPCION</h3>
+                    <p>La Herencia,<br>Quinta San Jorge, 67318 Santiago, NL</p>
+                    <a class="btn" href="#" target="_blank">DIRECCION</a>
+                </div>
+            </div>
+        </section>
+        <!-- RSVP -->
+        <section id="rsvp" class="rsvp">
+            <picture>
+                <source srcset="img/rsvp-horizontal.jpg" media="(min-width: 700px)">
+                <img src="assets/3_rsvp-m.webp" alt="Confirmación" class="bg-img side">
+            </picture>
+            <div class="floatingBox small">
+                <h2>Asistencia:</h2>
+                <p>Ayúdanos a que todo sea perfecto confirmando lo antes posible.</p>
+                <ol>
+                    <li>
+                        <h3>1 – No niños</h3>
+                        <p>Para priorizar su seguridad, la celebracion será solo para adultos.</p>
+                    </li>
+                    <li>
+                        <h3>2 – Un favor de corazón</h3>
+                        <p>Deseamos que la ceremonia sea un momento intimo, por eso pedimos que sea libre de celulares y cámaras. Queremos ver sus sonrisas, no pantallas. </p>
+                    </li>
+                </ol>
+                <a class="btn" href="https://wa.me/...">Confirmar</a>
+            </div>
+        </section>
+        <!-- INFO -->
+        <section id="info" class="info">
+            <picture>
+                <source srcset="img/info-horizontal.jpg" media="(min-width: 700px)">
+                <img src="assets/4_info-m.webp" alt="Más información" class="bg-img">
+            </picture>
+            <div class="floating-box">
+                <h2>Más Información</h2>
+                <p>Sigue la cuenta de los novios para actualizaciones.</p>
+                <a class="btn" href="https://instagram.com/...">@Cuenta IG</a>
+            </div>
+        </section>
+        <!-- DRESSCODE -->
+        <section id="dressCode" class="dressCode">
+            <picture>
+                <source srcset="img/dress-horizontal.jpg" media="(min-width: 700px)">
+                <img src="assets/5_dresscode-m.webp" alt="Dresscode" class="bg-img side">
+            </picture>
+            <div class="floating-box">
+                <h2>Dresscode</h2>
+                <p>Formal Jardín</p>
+                <p>Evita tonos muy claros. Queremos verte en tus colores favoritos.</p>
+                <a class="btn" href="#">Inspiración</a>
+            </div>
+        </section>
+        <!-- GIFTS -->
+        <section id="gifts" class="gifts">
+            <picture>
+                <source srcset="img/gifts-horizontal.jpg" media="(min-width: 700px)">
+                <img src="assets/6_regalos-m.webp" alt="Mesa de regalos" class="bg-img">
+            </picture>
+            <div class="floating-box">
+                <h2>Mesa de Regalos</h2>
+                <p>
+                    Gracias a tu regalo, nuestra luna de miel será aún más especial.
+                </p>
+                <button class="btn" data-open="transfer-modal">Transferencia</button>
+                <a class="btn" href="#" target="_blank">Amazon</a>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <picture>
+                <source srcset="img/faq-horizontal.jpg" media="(min-width: 700px)">
+                <img src="assets/7_faq-m.webp" alt="Preguntas frecuentes" class="bg-img">
+            </picture>
+            <div class="floating-box">
+                <details>
+                    <summary>¿Cuándo es la boda?</summary>
+                    <p>Respuesta...</p>
+                </details>
+                <details open>
+                    <summary>¿Cuál es el código de vestimenta?</summary>
+                    <p>Respuesta...</p>
+                </details>
+                <details>
+                    <summary>¿Hay opciones de hospedaje?</summary>
+                    <p>Respuesta...</p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <!-- MODAL (for transfer info) -->
+    <div id="transfer-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Transferencia Bancaria</h2>
+            <p>CLABE, nombre, banco, etc.</p>
+            <button class="btn copy">Copiar Cuenta</button>
+            <button class="btn close">Cerrar</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
