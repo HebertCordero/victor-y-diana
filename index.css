@@ -54,19 +54,19 @@ main {
   overflow: hidden;
 }
 h1 {
-  font-size: 40px;
+  font-size: var(--fs-800);
   font-weight: 100;
   color: var(--c-darkGreen);
   font-family: var(--ff-cinzel);
 }
 h2 {
-  font-size: 24px;
+  font-size: var(--fs-500);
   font-weight: 300;
   color: var(--c-darkGreen);
   font-family: var(--ff-cinzel);
 }
 h3 {
-  font-size: 20px;
+  font-size: var(--fs-400);
   font-weight: 100;
   color: var(--c-darkGreen);
   font-family: var(--ff-cinzel);
@@ -95,11 +95,19 @@ a.btn {
   font-weight: 300;
   border-radius: 5px;
 }
+a.btn.white{
+  background-color: var(--c-cream);
+  color: var(--c-darkGreen);
+  height: 30px;
+  width: 160px;
+  font-size: 12px;
+}
 .rsvp .btn,
 .dressCode .btn {
   width: 100%;
 }
 ul,li {
+  margin-bottom: 5px;
   list-style-type: none;
 }
 summary {
@@ -158,7 +166,7 @@ details {
 }
 .floatingBox.small {
   display: flex;
-  width: 250px;
+  width: 260px;
   padding: 15px;
   border-radius: 5px;
   background-color: rgba(245, 245, 245, 0.8);
@@ -176,6 +184,7 @@ details {
   object-fit: cover;
 }
 .bg-img.side {
+  max-height: 422px;
   width: 286px;
 }
 .schedule::before,
@@ -226,6 +235,12 @@ details {
   object-fit: cover;
   display: block;
 }
+.img {
+  display: block;
+  height: -webkit-fill-available;
+  width: 100%;
+  object-fit: cover;
+}
 /* Hero */
 .hero {
   height: 100vh;
@@ -250,6 +265,7 @@ details {
   z-index: 1;
 }
 .hero .floatingBox {
+  width: auto;
   display: grid;
   justify-items: center;
 }
@@ -302,6 +318,9 @@ details {
   margin: 5px auto;
   display: block;
   background-color: #152418;
+}
+.desktop {
+  display: none;
 }
 /* RSVP */
 .rsvp {
@@ -443,11 +462,166 @@ p.big-text {
   display: none;
 }
 /* AOS */
-@media (min-width:370px) {
+@media screen and (min-width: 450px) {
+  main {
+    gap: 0;
+  }
+  a.btn {
+    height: 30px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  /* HERO */
+  .hero {
+    order: 0;
+  }
+  .hero::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(30, 30, 30, 0.4) 100%);
+  }
+  .floatingBox.top {
+    top: unset;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    margin-bottom: 120px;
+  }
+  .hero .title {
+    display: flex;
+    align-items: center;
+  }
+  .hero h1,
+  .hero p,
+  .hero span {
+    color: var(--c-cream);
+  }
+  .hero h1 {
+    font-size: var(--fs-900);
+    font-weight: 100;
+  }
+  .hero .title .amp {
+    top: unset;
+    left: unset;
+    transform: unset;
+    position: relative;
+    font-size: var(--fs-600);
+    font-weight: 100;
+  }
+  .hero .date {
+    display: none;
+  }
+  /* Shedule */
   .schedule {
-    height: 700px;
+    order: 1;
+    height: auto;
   }
   .schedule .floatingBox .slot::before {
     height: 45px;
+  }
+  .schedule h2 {
+    margin-bottom: 10px;
+  }
+  .schedule .floatingBox-wrapper {
+    display: none;
+  }
+  .schedule .bg-img {
+    display: none;
+  }
+  .schedule::before {
+    background: unset;
+  }
+  .schedule::after {
+    background: unset;
+  }
+  .desktop {
+    display: grid;
+    padding: 30px 30px;
+  }
+  .schedule .desktop .card:nth-child(3) {
+    margin-top: 10px;
+  }
+  .schedule .card {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    background-color: var(--c-darkGreen);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  }
+  .schedule .card .desc {
+    display: grid;
+    margin: 30px 15px;
+  }
+  .schedule .card .desc:first-child {
+    order: 1;
+  }
+  .schedule .card:nth-child(3) {
+    grid-template-columns: 3fr 2fr;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  }
+  .schedule .card:nth-child(3) .desc:first-child {
+    order: 0;
+  }
+  .schedule h3 {
+    color: var(--c-cream);
+    font-size: var(--fs-100);
+  }
+  .schedule h4 {
+    color: var(--c-cream);
+    font-size: 10px;
+    font-weight: 200;
+  }
+  .schedule p {
+    color: var(--c-cream);
+    font-size: 10px;
+    font-weight: 100;
+    text-align: left;
+    margin: 5px 0;
+  }
+  /* INFO */
+  .info {
+    height: 400px;
+    order: 2;
+  }
+  .info::before,
+  .info::after {
+    background: unset;
+  }
+  .info .floatingBox {
+    gap: 8px;
+    width: 300px;
+    padding: 15px 15px;
+  }
+  .info .floatingBox p {
+    font-size: 10px;
+  }
+  /* RSVP */
+  .rsvp {
+    order: 3;
+  }
+  /* DRESSCODE */
+  .dressCode {
+    order: 4;
+  }
+  /* GIFTS */
+  .gifts {
+    order: 5;
+  }
+  /* FAQ */
+  .faq {
+    order: 6;
+  }
+  /* FOOTER */
+  .footer {
+    order: 7;
+  }
+  /* COUNTDOWN */
+  .countdown-container {
+    gap: 20px;
+    margin-top: 5px;
+  }
+  .hero .big-text {
+    font-size: var(--fs-400);
+  }
+  .hero .countdown-el span {
+    font-size: var(--fs-300);
+    font-weight: 300;
   }
 }

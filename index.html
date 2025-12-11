@@ -24,9 +24,11 @@
     <main>
         <!-- HERO -->
         <section id="hero" class="hero">
-            <picture>
-                <!-- Desktop -->
-                <source srcset="img/hero-horizontal.jpg" media="(min-width: 700px)">
+            <picture data-aos="zoom-in" data-aos-offset="0" data-aos-duration="1500">
+                <!-- Desk -->
+                 <source srcset="assets/1_hero-d.webp" media="screen and (min-width: 600px)">
+                <!-- Tab -->
+                <source srcset="assets/1_hero-d_small.webp" media="screen and (min-width: 450px)">
                 <!-- Mobile -->
                 <img src="assets/1_hero-m.webp" alt="Victor y Diana" class="bg-img">
             </picture>
@@ -61,7 +63,7 @@
                 <source srcset="img/schedule-horizontal.jpg" media="(min-width: 700px)">
                 <img src="assets/2_horario-m.webp" alt="Itinerario" class="bg-img">
             </picture>
-            <div class="floatingBox-wrapper centered" data-aos="flip-left" data-aos-offset="200" data-aos-duration="2000">
+            <div class="floatingBox-wrapper centered" data-aos="zoom-out" data-aos-offset="200" data-aos-duration="2000">
                 <div class="floatingBox">
                     <h2>ITINERARIO</h2>
                     <div class="slot">
@@ -81,6 +83,27 @@
                     </div>
                 </div>
             </div>
+            <div class="desktop">
+                <h2>ITINERARIO</h2>
+                <div class="card">
+                    <div class="desc">
+                        <h3>16:00 - MISA</h3>
+                        <h4>Parroquia El Señor de la Misericordia, Pueblo Serena</h4>
+                        <p>¡Deseamos que la ceremonia sea un momento íntimo! Por eso, pedimos que sea libre de distracciones — queremos ver sus caritas, no pantallas al entrar a la celebración</p>
+                        <a class="btn white" href="#" target="_blank">Direccion</a>
+                    </div>
+                    <img src="assets/2_horario-misa.webp" alt="Misa" class="img">
+                </div>
+                <div class="card">
+                    <div class="desc">
+                        <h3>16:00 - MISA</h3>
+                        <h4>Parroquia El Señor de la Misericordia, Pueblo Serena</h4>
+                        <p>¡Deseamos que la ceremonia sea un momento íntimo! Por eso, pedimos que sea libre de distracciones — queremos ver sus caritas, no pantallas al entrar a la celebración</p>
+                        <a class="btn white" href="#" target="_blank">Direccion</a>
+                    </div>
+                    <img src="assets/2_horario-recep.webp" alt="Misa" class="img">
+                </div>
+            </div>
         </section>
         <!-- RSVP -->
         <section id="rsvp" class="rsvp">
@@ -94,11 +117,11 @@
                     <p>Ayúdanos a que todo sea perfecto confirmando lo antes posible.</p>
                     <ol>
                         <li>
-                            <h3>1 – No niños</h3>
+                            <h3>1 – NO NIÑOS</h3>
                             <p>Para priorizar su seguridad, la celebracion será solo para adultos.</p>
                         </li>
                         <li>
-                            <h3>2 – Un favor de corazón</h3>
+                            <h3>2 – UN FAVOR DE CORAZÓN</h3>
                             <p>Deseamos que la ceremonia sea un momento intimo, por eso pedimos que sea libre de celulares y cámaras. Queremos ver sus sonrisas, no pantallas. </p>
                         </li>
                     </ol>
@@ -109,7 +132,7 @@
         <!-- INFO -->
         <section id="info" class="info" data-aos="zoom-out-up" data-aos-offset="200" data-aos-duration="2000">
             <picture>
-                <source srcset="img/info-horizontal.jpg" media="(min-width: 700px)">
+                <source srcset="assets/4_info-d_v2.webp" media="(min-width: 450px)">
                 <img src="assets/4_info-m.webp" alt="Más información" class="bg-img">
             </picture>
             <div class="floatingBox bottom">
@@ -126,7 +149,7 @@
             </picture>
             <div class="floatingBox-wrapper right" data-aos="fade-down-right" data-aos-offset="200" data-aos-duration="1000">
                 <div class="floatingBox small right">
-                    <h2>DRESSCODE</h2>
+                    <h2>DRESSCODE:</h2>
                     <p class="desc">Formal Jardín</p>
                     <p>Queremos que te sientas espectacular, pero sobre todo cómodo/a — que tu vestimenta no te impida bailar, reír y disfrutar de principio a fin. La paleta de colores es libre y nos encantaría verte usar tus colores favoritos, solo te pedimos evitar los tonos muy claros (ya sabes, ¡la de blanco es la novia!).</p>
                     <a class="btn" href="#">Inspiración</a>
@@ -169,7 +192,7 @@
                 </details>
                 <details>
                     <summary>¿Dónde es la misa?</summary>
-                    <p>En la Parroquia "El Señor de la Misericordia", dentro de Pueblo Serena (ubicación: https://share.google/THdxxAAwSuSnQpY3a)</p>
+                    <p>En la Parroquia "El Señor de la Misericordia", dentro de Pueblo Serena (ubicación: <a href="https://share.google/wenQnd1UJnmiP4xu9">https://share.google/wenQnd1UJnmiP4xu9</a>)</p>
                 </details>
                 <details>
                     <summary>¿Dónde puedo estacionarme?</summary>
@@ -177,7 +200,7 @@
                 </details>
                 <details>
                     <summary>Recomendaciones para la misa:</summary>
-                    <p>La misa inicia a las 4:00 p.m. Te recomendamos llegar unos 15–20 minutos antes para estacionarte con calma, caminar hacia la parroquia y disfrutar el inicio de la ceremonia.</p>
+                    <p>La misa inicia a las 4:00 p.m. Te recomendamos llegar unos 15-20 minutos antes para estacionarte con calma, caminar hacia la parroquia y disfrutar el inicio de la ceremonia.</p>
                 </details>
                 <details>
                     <summary>Fotos durante la ceremonia</summary>
@@ -185,7 +208,7 @@
                 </details>
                 <details>
                     <summary>¿Dónde será la fiesta?</summary>
-                    <p>La hora de cóctel y recepción serán en el jardín "La Herencia", ubicado sobre carretera nacional (ubicación: https://share.google/wenQnd1UJnmiP4xu9)</p>
+                    <p>La hora de cóctel y recepción serán en el jardín "La Herencia", ubicado sobre carretera nacional (ubicación: <a href="https://share.google/wenQnd1UJnmiP4xu9">https://share.google/wenQnd1UJnmiP4xu9</a>)</p>
                 </details>
                 <details>
                     <summary>Tiempo de viaje: parroquia → jardín</summary>
@@ -257,6 +280,95 @@
             });
         });
     });
+    </script>
+    <!-- CountDown -->
+    <script>
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minsEl = document.getElementById("mins");
+
+        // Sun Dec 17 1995 03:24:00 GMT
+        const targetDay = "2026-03-14T17:00:00";
+
+        function countdown() {
+            const newDate = new Date(targetDay);
+            const currentDate = new Date();
+
+            const totalSeconds = (newDate - currentDate) / 1000;
+
+            const days = Math.floor(totalSeconds / 3600 / 24);
+            const hours = Math.floor(totalSeconds / 3600) % 24;
+            const mins = Math.floor(totalSeconds / 60) % 60;
+            const seconds = Math.floor(totalSeconds) % 60;
+            
+            if(seconds < 0) {
+            daysEl.innerHTML = 0;
+            hoursEl.innerHTML = 0;
+            minsEl.innerHTML = 0;
+            } else {
+            daysEl.innerHTML = days;
+            hoursEl.innerHTML = formatTime(hours);
+            minsEl.innerHTML = formatTime(mins);
+            }
+        }
+
+        function formatTime(time) {
+            //console.log(time)
+            return time < 10 ? `0${time}` : time;
+        }
+
+        // initial call
+        countdown();
+
+        setInterval(countdown, 1000);
+    </script>
+    <!-- Modal -->
+    <script>
+        const modal = document.getElementById('transfer-modal');
+        const gallerie = document.getElementById('doggies');
+        const closeModalButton = document.getElementById('close-modal');
+    
+        // Show the modal
+        function showModal(viewType) {
+            modal.style.display = 'flex';
+            // Switch between views
+            if (viewType === 'doggies') {
+                gallerie.style.display = 'flex';
+            }
+        }
+    
+        // Close modal function
+        function closeModal() {
+            modal.style.display = 'none'; // Hide the modal
+            doggiesView.style.display = 'none';
+            giftView.style.display = 'none';
+        }
+    
+        // Add event listener to the close button
+        closeModalButton.addEventListener('click', closeModal);
+    
+        // Add event listener to the modal background
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) { // Check if the click is on the modal (not on the content)
+                closeModal();
+            }
+        });
+        // Add event listener to the DOGGY buttons
+        const doggyBtn = document.querySelectorAll('button.doggy');
+        doggyBtn.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                showModal('doggies'); // Open the modal with the doggies view
+            });
+        });
+        // Add event listener to the DOGGY buttons
+        const giftBtn = document.querySelectorAll('a.gift');
+        giftBtn.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                showModal('gift'); // Open the modal with the doggies view
+            });
+        });
     </script>
 </body>
 </html>
